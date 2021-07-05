@@ -40,7 +40,7 @@ I have only tested installation on EndeavourOS. If you're using EndeavourOS, you
 
 From official repos:
 ```
-alacritty rxvt-unicode bspwm sxhkd i3-gaps obconf dunst picom xsettingsd lightdm-webkit2-greeter firefox nitrogen nautilus mousepad vim maim polkit-gnome network-manager-applet blueberry lxappearance xorg-xbacklight ttf-fira-code ttf-roboto npm nodejs rustup
+alacritty rxvt-unicode bspwm sxhkd i3-gaps obconf dunst picom xsettingsd lightdm-webkit2-greeter firefox nitrogen nautilus mousepad vim maim polkit-gnome network-manager-applet blueberry lxappearance xorg-xbacklight ttf-fira-code ttf-roboto noto-fonts noto-fonts-cjk noto-fonts-emoji npm nodejs rustup
 ```
 
 From the AUR:
