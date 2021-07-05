@@ -16,10 +16,8 @@ This project aims to provide several cohesive desktops that can be changed on th
 | :---:					| :---:					|
 | ![Dark](dark.png "Dark")		| ![Light](light.png "Light")		|
 | Arch Dark Alt				| Arch Light Alt			|
-| :---:					| :---:					|
 | ![DarkAlt](darkalt.png "DarkAlt")	| ![LightAlt](lightalt.png "LightAlt")	|
 | Cabin					| Noel Red				|
-| :---:					| :---:					|
 | ![Cabin](cabin.png "Cabin")		| ![NoelRed](noelred.png "NoelRed")	|
 
 ##  FAQ
