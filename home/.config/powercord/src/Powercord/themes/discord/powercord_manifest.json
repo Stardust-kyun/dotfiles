@@ -1,0 +1,9 @@
+{
+	"name": "Script Theme",
+	"description": "A theme built to be used with a script to change its colors on the fly.",
+	"version": "1.0",
+	"author": "Stardust-kyun#5994",
+	"theme": "discord.theme.css",
+	"consent": "false",
+	"license": "MIT"
+}
