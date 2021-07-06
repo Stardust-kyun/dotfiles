@@ -34,7 +34,7 @@ My current plans for this project are to create a few more desktops, make an ins
 
 ## Installation
 
-I have only tested installation on EndeavourOS. If you're using EndeavourOS, you will need the following packages. There may be some that are missing.
+I have found my dotfiles to work out of the box on EndeavourOS. If you're using EndeavourOS, you will need to install **only** `base-devel and common packages` as well as the following packages. There may be some that are missing.
 
 From official repos:
 ```
@@ -53,6 +53,7 @@ From source:
 - A mod for the discord client called [powercord](https://powercord.dev/installation).
 - A widget project called [eww](https://elkowar.github.io/eww/).
 
+If you are installing from a base Arch install, you will also need to install all packages in the `xorg` group as well as any needed graphical drivers.
 
 There currently isn't an installation script for my dotfiles, so follow this:
 
