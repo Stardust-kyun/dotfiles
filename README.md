@@ -10,15 +10,13 @@ This project aims to provide several cohesive desktops that can be changed on th
 
 ## Pictures
 
-![Desktops](desktops.png "Desktops")
-
-| Arch Dark				| Arch Light				|
-| :---:					| :---:					|
-| ![Dark](dark.png "Dark")		| ![Light](light.png "Light")		|
-| Arch Dark Alt				| Arch Light Alt			|
-| ![DarkAlt](darkalt.png "DarkAlt")	| ![LightAlt](lightalt.png "LightAlt")	|
-| Cabin					| Noel Red				|
-| ![Cabin](cabin.png "Cabin")		| ![NoelRed](noelred.png "NoelRed")	|
+| Arch Dark					| Arch Light					|
+| :---:						| :---:						|
+| ![Dark](src/dark.png "Dark")			| ![Light](src/light.png "Light")		|
+| Arch Dark Alt					| Arch Light Alt				|
+| ![DarkAlt](src/darkalt.png "DarkAlt")		| ![LightAlt](src/lightalt.png "LightAlt")	|
+| Cabin						| Noel Red					|
+| ![Cabin](src/cabin.png "Cabin")		| ![NoelRed](src/noelred.png "NoelRed")		|
 
 ##  FAQ
 
@@ -45,7 +43,7 @@ alacritty rxvt-unicode bspwm sxhkd i3-gaps obconf dunst picom xsettingsd lightdm
 
 From the AUR:
 ```
-polybar betterlockscreen discord-canary zentile nerd-fonts-fira-code nerd-fonts-iosevka
+polybar betterlockscreen discord-canary zentile nerd-fonts-fira-code nerd-fonts-iosevka gtk3-nocsd-git
 ```
 
 From source:
@@ -64,8 +62,16 @@ There currently isn't an installation script for my dotfiles, so follow this:
 - You may need to substitute in your own files in some cases, like `home/.config/eww/image.png`.
 - Clone powercord into `~/.config`. It will not work otherwise.
 - After copying `usr/share/icons`, run `tar -xzvf filename.tar.gz` to extract.
+- After installing `lightdm-webkit2-greeter`, you will need to edit `/etc/lightdm/lightdm.conf` to set `greeter-session` around line 102 to `greeter-session=lightdm-webkit2-greeter` and enable lightdm with `sudo systemctl enable lightdm`.
 - After cloning the repo for openbox, cd into the repo and run `./bootstrap`, `./configure --prefix=/usr --sysconfdir=/etc`, `make`, then `sudo make install` **in that order**.
-- You will need to substitute `home/.mozilla/firefox/default-release` with your default release directory. These are usually follow `xxxxxxxx.default-release` as their naming scheme. You will need to go to `about:config` and enable `toolkit.legacyUserProfileCustomizations.stylesheets` and `browser.compactmode.show`, and disable `browser.proton.enabled`. You will need to enable compact mode in the `Customize Toolbar` menu.
+- You will need to substitute `home/.mozilla/firefox/default-release` with your default release directory. These are usually follow `xxxxxxxx.default-release` as their naming scheme. You will need to go to `about:config` and enable `toolkit.legacyUserProfileCustomizations.stylesheets` and `browser.compactmode.show`, and disable `browser.proton.enabled`. You will also need to enable compact mode in the `Customize Toolbar` menu.
+
+Some optional changes and instructions:
+
+- The first time you boot into the desktop, you will need to set a wallpaper through nitrogen or set your desktop to apply the wallpaper.
+- To set your wallpaper directory in nitrogen, open `preferences`, `add`, and select your wallpaper directory. For my dotfiles, you should select ~/Pictures/Wallpaper. Then, select `OK`.
+- If you would like to always use file path instead of current directory in nautilus, run `gsettings set org.gnome.nautilus.preferences always-use-location-entry true`.
+- If you would like to use a different wallpaper for a desktop, edit its desktop file in `~/.config/colors` and change the wallpaper file to the wallpaper that you want. Currently you will need to do this manually.
 
 You may also need to install `rsync` to merge the dotfiles with your existing directories. Here's an example:
 

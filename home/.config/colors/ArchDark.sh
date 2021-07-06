@@ -30,7 +30,7 @@ sed -i -e 's/fg-alt = .*/fg-alt = #707070/g' $POLY/Arch/config.ini
 sed -i -e 's/.*#Launch/polybar -c $HOME\/.config\/polybar\/Arch\/config.ini main \& #Launch/g' $POLY/launch.sh
 
 # Change Wallpaper
-nitrogen --set-zoom-fill $WALL/WelcomeHomeDark.png --save && betterlockscreen -u $WALL/WelcomeHomeDark.png &
+nitrogen --set-zoom-fill $WALL/GreyLake.jpg --save && betterlockscreen -u $WALL/GreyLake.jpg &
 
 # Change Notifs
 sed -i -e 's/background = .*/background = "#161616"/g' $NOTI/dunstrc
@@ -108,7 +108,7 @@ sed -i -e 's/--header-primary: .*/--header-primary: white !important;/g' $CORD/d
 sed -i -e 's/--header-secondary: .*/--header-secondary: #c9c9c9 !important;/g' $CORD/discord.theme.css
 
 # Change LightDM
-sed -i -e 's/wallpapers\/.*/wallpapers\/WelcomeHomeDark.png)";/g' /usr/share/lightdm-webkit/themes/arch/main.js
+sed -i -e 's/wallpapers\/.*/wallpapers\/GreyLake.jpg)";/g' /usr/share/lightdm-webkit/themes/arch/main.js
 sed -i -e 's/ color: .*/ color: #ededed;/g' /usr/share/lightdm-webkit/themes/arch/index.css
 
 # Change Firefox
