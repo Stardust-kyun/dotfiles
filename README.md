@@ -38,7 +38,7 @@ I have found my dotfiles to work out of the box on EndeavourOS. If you're using 
 
 From official repos:
 ```
-alacritty rxvt-unicode bspwm sxhkd i3-gaps obconf dunst picom xsettingsd lightdm-webkit2-greeter firefox nitrogen nautilus mousepad vim maim polkit-gnome network-manager-applet blueberry lxappearance xorg-xbacklight ttf-fira-code ttf-roboto noto-fonts noto-fonts-cjk noto-fonts-emoji npm nodejs rustup
+alacritty rxvt-unicode bspwm sxhkd i3-gaps obconf dunst picom xsettingsd lightdm-webkit2-greeter firefox nitrogen nautilus mousepad vim maim polkit-gnome network-manager-applet blueberry lxappearance xorg-xbacklight ttf-fira-code ttf-roboto noto-fonts noto-fonts-cjk noto-fonts-emoji npm nodejs rustup xdg-user-dirs
 ```
 
 From the AUR:
@@ -70,6 +70,7 @@ There currently isn't an installation script for my dotfiles, so follow this:
 Some optional changes and instructions:
 
 - The first time you boot into the desktop, you will need to set a wallpaper through nitrogen or set your desktop to apply the wallpaper.
+- To set default folders like Downloads, Pictures, and Videos in your home directory run `xdg-user-dirs-update`.
 - To set your wallpaper directory in nitrogen, open `preferences`, `add`, and select your wallpaper directory. For my dotfiles, you should select ~/Pictures/Wallpaper. Then, select `OK`.
 - If you would like to always use file path instead of current directory in nautilus, run `gsettings set org.gnome.nautilus.preferences always-use-location-entry true`.
 - If you would like to use a different wallpaper for a desktop, edit its desktop file in `~/.config/colors` and change the wallpaper file to the wallpaper that you want. Currently you will need to do this manually.
