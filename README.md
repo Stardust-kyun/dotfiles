@@ -64,8 +64,17 @@ There currently isn't an installation script for my dotfiles, so follow this:
 - You may need to substitute in your own files in some cases, like `home/.config/eww/image.png`.
 - Clone powercord into `~/.config`. It will not work otherwise.
 - After copying `usr/share/icons`, run `tar -xzvf filename.tar.gz` to extract.
-- After cloning the repo for Openbox, cd into the repo and run `./bootstrap`, `./configure --prefix=/usr --sysconfdir=/etc`, `make`, then `sudo make install` **in that order**.
+- After cloning the repo for openbox, cd into the repo and run `./bootstrap`, `./configure --prefix=/usr --sysconfdir=/etc`, `make`, then `sudo make install` **in that order**.
 - You will need to substitute `home/.mozilla/firefox/default-release` with your default release directory. These are usually follow `xxxxxxxx.default-release` as their naming scheme. You will need to go to `about:config` and enable `toolkit.legacyUserProfileCustomizations.stylesheets` and `browser.compactmode.show`, and disable `browser.proton.enabled`. You will need to enable compact mode in the `Customize Toolbar` menu.
+
+You may also need to install `rsync` to merge the dotfiles with your existing directories. Here's an example:
+
+```
+git clone https://github.com/Stardust-kyun/dotfiles
+rsync -a dotfiles/home/ ~/
+```
+
+This will clone my dotfiles and merge the `home` directory of the dotfiles with the user's home directory.
 
 If you have any issues, feel free to contact me. You can reach out to me on discord: @Stardust-kyun#5994.
 
