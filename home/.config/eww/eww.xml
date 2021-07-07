@@ -2,7 +2,7 @@
 	<variables>
 		<!--profile-->
 		<var name="IMAGE">image.png</var>
-		<var name="NAME">Stardust-kyun</var>
+		<var name="NAME">YOUR NAME</var>
 		<script-var name="USERNAME">echo @`whoami`</script-var>
 		<!--time-->
 		<script-var name="TIME" interval="1s">date +"%a %d/%m %I:%M %p"</script-var>

@@ -38,7 +38,7 @@ I have found my dotfiles to work out of the box on EndeavourOS. If you're using 
 
 From official repos:
 ```
-alacritty rxvt-unicode bspwm sxhkd i3-gaps obconf dunst picom xsettingsd lightdm-webkit2-greeter firefox nitrogen nautilus mousepad vim maim polkit-gnome network-manager-applet blueberry lxappearance xorg-xbacklight ttf-fira-code ttf-roboto noto-fonts noto-fonts-cjk noto-fonts-emoji npm nodejs rustup xdg-user-dirs
+alacritty rxvt-unicode bspwm sxhkd i3-gaps obconf dunst picom xsettingsd lightdm-webkit2-greeter firefox nitrogen nautilus mousepad vim maim polkit-gnome network-manager-applet blueberry lxappearance xorg ttf-fira-code ttf-roboto noto-fonts noto-fonts-cjk noto-fonts-emoji npm nodejs rustup xdg-user-dirs
 ```
 
 From the AUR:
@@ -52,8 +52,6 @@ From source:
 - My patched build of [dmenu](https://github.com/Stardust-kyun/dmenu) with features listed on the repo.
 - A mod for the discord client called [powercord](https://powercord.dev/installation).
 - A widget project called [eww](https://elkowar.github.io/eww/).
-
-If you are installing from a base Arch install, you will also need to install all packages in the `xorg` group as well as any needed graphical drivers.
 
 There currently isn't an installation script for my dotfiles, so follow this:
 
