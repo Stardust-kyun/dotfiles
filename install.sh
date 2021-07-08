@@ -54,6 +54,7 @@ git clone https://aur.archlinux.org/yay.git ~/yay
 cd ~/yay
 makepkg -si
 rm -rf ~/yay
+cd ~/
 
 echo "Installing required packages from AUR"
 yay -S --noconfirm --needed polybar betterlockscreen discord-canary zentile nerd-fonts-fira-code nerd-fonts-iosevka gtk3-nocsd-git
@@ -66,12 +67,14 @@ cd ~/openbox
 make
 sudo make install
 rm -rf ~/openbox
+cd ~/
 
 echo "Installing patched dmenu"
 git clone https://github.com/Stardust-kyun/dmenu ~/dmenu
 cd ~/dmenu
 sudo make clean install
 rm -rf ~/dmenu
+cd ~/
 
 echo "Installing powercord"
 mkdir ~/.config
@@ -88,6 +91,7 @@ cd target/release
 chmod +x eww
 sudo cp eww /bin
 rm -rf ~/eww
+cd ~/
 
 echo "Copying dotfiles"
 cd ~/dotfiles
@@ -96,14 +100,14 @@ sudo rsync -a bin/ /bin/
 sudo rsync -a usr/share/ /usr/share/
 
 echo "Miscellaneous setup"
-cd /usr/share/
+cd /usr/share/icons
 tar -xzf Arch.tar.gz
 tar -xzf Cabin.tar.gz
 tar -xzf NoelRed.tar.gz
 rm *.tar.gz
-sudo sed -i '103 s/greeter-session = .*/greeter-session = lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
+# sudo sed -i '103 s/greeter-session = .*/greeter-session = lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
 sudo systemctl enable lightdm
-mv ~/.mozilla/firefox/default-release/chrome ~/.mozilla/firefox/*.default-release/
+# mv ~/.mozilla/firefox/default-release/chrome ~/.mozilla/firefox/*.default-release/
 xdg-user-dirs-update
 gsettings set org.gnome.nautilus.preferences always-use-location-entry true
 
