@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "\n\n\nWelcome to Stardust-kyun's dotfiles! \nThis script will install them to your current user, and may overwrite existing files.\n\n1) Yes [yes/y]	2) No [no/n]" 
+echo -e "\n\n\nWelcome to Stardust-kyun's dotfiles! \nThis script will install them to your current user, and may overwrite existing files. Please back up your filesbefore installing.\n\n\n\n1) Yes [yes/y]	2) No [no/n]" 
 
 read -r -p "Are you sure you want to proceed? " start 
 case $start in 
@@ -22,7 +22,7 @@ sudo pacman --noconfirm -Syu
 echo -e "\nInstalling base packages\n"
 sudo pacman -S --noconfirm --needed base-devel git rsync
 
-echo "1) xf86-video-intel	2) xf86-video-amdgpu	3) none"
+echo -e "\n1) xf86-video-intel	2) xf86-video-amdgpu	3) none"
 read -r -p "Select your graphics drivers (default 3): " video
 
 case $video in
