@@ -63,6 +63,8 @@ if [[ $helper = "1" ]]; then
 fi
 
 if [[ $helper = "2" ]]; then
+	rustup install nightly
+	rustup default nightly
 	git clone https://aur.archlinux.org/paru.git ~/paru
 	cd ~/paru
 	makepkg -si
