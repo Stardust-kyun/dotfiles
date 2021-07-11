@@ -60,16 +60,8 @@ sed -i -e 's/dmenu.foreground: .*/dmenu.foreground: #79695a/g' $HOME/.Xresources
 sed -i -e 's/dmenu.selbackground: .*/dmenu.selbackground: #5D6051/g' $HOME/.Xresources
 sed -i -e 's/dmenu.selforeground: .*/dmenu.selforeground: #201e1a/g' $HOME/.Xresources
 
-# Change Spicetify
-sed -i -e 's/*.color16: .*/*.color16: #79695a/g' $HOME/.Xresources
-sed -i -e 's/*.color17: .*/*.color17: #201e1a/g' $HOME/.Xresources
-sed -i -e 's/*.color18: .*/*.color18: #827161/g' $HOME/.Xresources
-sed -i -e 's/*.color19: .*/*.color19: #1a1815/g' $HOME/.Xresources
-sed -i -e 's/*.color20: .*/*.color20: #FFF/g' $HOME/.Xresources
-
-# Update URxvt, Dmenu, and Spicetify
+# Update URxvt and Dmenu
 xrdb $HOME/.Xresources
-spicetify apply -n
 
 # Change Alacritty
 sed -i -e 's/.*#BG/    "#201e1a" #BG/g' $ALAC/alacritty.yml

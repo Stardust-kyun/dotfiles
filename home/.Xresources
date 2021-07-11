@@ -54,19 +54,6 @@ URxvt.letterSpace: 0
 *.color7:       FG
 *.color15:      FG
 
-! spicetify variables
-
-! foreground
-*.color16: #f2f2f2
-! background
-*.color17: #161616
-! foreground secondary
-*.color18: #707070
-! background secondary
-*.color19: #111111
-! solid
-*.color20: #FFF
-
 ! dmenu variables
 
 dmenu.font: FiraCode
