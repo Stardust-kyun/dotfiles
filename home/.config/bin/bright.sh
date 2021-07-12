@@ -3,10 +3,10 @@
 # You can call this script like this:
 # $./bright.sh up
 # $./bright.sh down
-currentlight=$(xbacklight)
+currentlight=$(light)
 
 function get_light {
-    xbacklight | awk '{print int($1+0.5)}'
+    light | awk '{print int($1+0.5)}'
 }
 
 
@@ -31,11 +31,11 @@ function send_notification {
 
 case $1 in
     up)
-	xbacklight -time 0 -inc 10
+	light -A 10
 	send_notification
 	;;
     down)
-	xbacklight -time 0 -dec 10
+	light -U 10
 	send_notification
 	;;
 esac
