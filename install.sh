@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "\n\n\nWelcome to Stardust-kyun's dotfiles! \nThis script will install them to your current user, and may overwrite existing files. Please back up your filesbefore installing.\n\n\n\n1) Yes [yes/y]	2) No [no/n]" 
+echo -e "\n\n\nWelcome to Stardust-kyun's dotfiles! \nThis script will install them to your current user, and may overwrite existing files. Please back up your files before installing.\n\n\n\n1) Yes [yes/y]	2) No [no/n]" 
 
 read -r -p "Are you sure you want to proceed? " start 
 case $start in 
@@ -46,7 +46,7 @@ esac
 
 sudo pacman -S --noconfirm --needed $driver
 
-echo "\nInstalling required packages from official repos\n" && sleep 3
+echo -e "\nInstalling required packages from official repos\n" && sleep 3
 sudo pacman -S --noconfirm --needed alacritty rxvt-unicode bspwm sxhkd i3-gaps obconf dunst picom xsettingsd lightdm-webkit2-greeter firefox nitrogen nautilus mousepad vim maim polkit-gnome network-manager-applet blueberry lxappearance xorg ttf-fira-code ttf-roboto noto-fonts noto-fonts-cjk noto-fonts-emoji npm nodejs rustup xdg-user-dirs
 
 echo "1) yay	2) paru"
@@ -111,19 +111,19 @@ sudo cp eww /bin
 rm -rf ~/eww
 cd ~/
 
-echo "Copying dotfiles"
+echo -e "\nCopying dotfiles\n"
 cd ~/dotfiles
 rsync -a home/ ~/
 sudo rsync -a bin/ /bin/
 sudo rsync -a usr/share/ /usr/share/
 
-echo "Miscellaneous setup"
+echo -e "\nMiscellaneous setup\n"
 cd /usr/share/icons
 tar -xzf Arch.tar.gz
 tar -xzf Cabin.tar.gz
 tar -xzf NoelRed.tar.gz
 rm *.tar.gz
-sudo sed -i 's/greeter-session = .*/greeter-session = lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
+sudo sed -i 's/.greeter-session.*/greeter-session=lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
 sudo systemctl enable lightdm
 xdg-user-dirs-update
 gsettings set org.gnome.nautilus.preferences always-use-location-entry true

@@ -40,8 +40,8 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/bin/volume.sh up
 bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/bin/volume.sh down
 
 # Start Applications
-bindsym $mod+Delete --release exec --no-startup-id maim -u ~/Pictures/Screenshots/$(date +%F-%H%M%S)_maim.png && notify-send -i image-missing "Screenshot Taken" "Saved to ~/Pictures/Screenshots"
-bindsym $mod+Shift+Delete --release exec --no-startup-id maim -s -u ~/Pictures/Screenshots/$(date +%F-%H%M%S)_maim.png && notify-send -i image-missing "Screenshot Taken" "Saved to ~/Pictures/Screenshots"
+bindsym $mod+Delete --release exec --no-startup-id maim -u | tee $HOME/Pictures/Screenshots/$(date +%F-%H%M%S)_maim.png | xclip -selection clipboard -t image/png && notify-send -i image-missing "Screenshot Taken" "Saved to \~/Pictures/Screenshots"
+bindsym $mod+Shift+Delete --release exec --no-startup-id maim -s -u | tee $HOME/Pictures/Screenshots/$(date +%F-%H%M%S)_maim.png | xclip -selection clipboard -t image/png && notify-send -i image-missing "Screenshot Taken" "Saved to \~/Pictures/Screenshots"
 bindsym $mod+e exec --no-startup-id ~/.config/bin/emoticons.sh
 bindsym $mod+z exec --no-startup-id eww close profile && eww close greeting && eww close time && eww close volume && eww close brightness || eww open-many profile greeting time volume brightness
 bindsym $mod+k exec --no-startup-id eww close keybinds || eww open keybinds
@@ -68,6 +68,9 @@ bindsym $mod+v split v;exec --no-startup-id $HOME/.config/bin/notify-send.sh --r
 
 # toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
+
+# pseudo fullscreen (barless)
+# bindsym $mod+p exec --no-startup-id polybar-msg cmd toggle
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle

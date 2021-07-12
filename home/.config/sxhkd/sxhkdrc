@@ -37,10 +37,11 @@ XF86MonBrightnessDown
 #
 
 alt + Delete
-	maim -u $HOME/Pictures/Screenshots/$(date +%F-%H%M%S)_maim.png && notify-send -i image-missing "Screenshot Taken" "Saved to ~/Pictures/Screenshots"
+	maim -u | tee $HOME/Pictures/Screenshots/$(date +%F-%H%M%S)_maim.png | xclip -selection clipboard -t image/png && notify-send -i image-missing "Screenshot Taken" "Saved to \~/Pictures/Screenshots"
 
 alt + shift + Delete
-	maim -s -u $HOME/Pictures/Screenshots/$(date +%F-%H%M%S)_maim.png && notify-send -i image-missing "Screenshot Taken" "Saved to ~/Pictures/Screenshots"
+	maim -s -u | tee $HOME/Pictures/Screenshots/$(date +%F-%H%M%S)_maim.png | xclip -selection clipboard -t image/png && notify-send -i image-missing "Screenshot Taken" "Saved to \~/Pictures/Screenshots"
+
 alt + z
 	eww close profile && eww close greeting && eww close time && eww close volume && eww close brightness || eww open-many profile greeting time volume brightness
 alt + k
@@ -55,9 +56,6 @@ alt + k
 
 alt + 0
 	sh $HOME/.config/bin/powermenu
-
-# alt + shift + s
-# 	$HOME/.config/bin/notify-send.sh "Screen" "Shutting down in 3 seconds..." --replace=111 && sleep 1 && $HOME/.config/bin/notify-send.sh "Screen" "Shutting down in 2 seconds..." --replace=111 && sleep 1 && $HOME/.config/bin/notify-send.sh "Screen" "Shutting down in 1 second..." --replace=111 && sleep 1 && xset dpms force off
 
 #
 # wm independent hotkeys
