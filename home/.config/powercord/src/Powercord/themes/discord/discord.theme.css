@@ -51,28 +51,33 @@
    --scrollbar-auto-scrollbar-color-track: transparent !important;
 }
 
-/*
-.peopleColumn-29fq28 {
-	background-color: var(--background-primary) !important;
+
+
+/* Hide Nitro gift button */
+button[aria-label="Send a gift"] {
+  display: none;
 }
 
-.scroller-lynW5A {
-	background-color: var(--background-primary) !important;
+/* Hide GIF picker button */
+button[aria-label="Open GIF picker"] {
+  display: none;
 }
 
-.uploadModal-2ifh8j {
-	background-color: var(--background-primary) !important;
+/* Hide sticker picker button */
+button[aria-label="Open sticker picker"] {
+  display: none;
 }
 
-.footer-3mqk7D {
-	background-color: var(--background-primary) !important;
+/* Hides server banners */ 
+.animatedContainer-1NSq4T,.bannerImage-3KhIJ6{
+  display: none;  
 }
-
-.resultsGroup-r_nuzN {
-	background-color: var(--background-primary) !important;
+[style="height: 84px;"]{
+   display:none !important;
 }
-
-.barBase-1c2Rfb.newMessagesBar-265mhP {
-	background-color: var(--highlight) !important;
+.hasBanner-2SrLR3 .header-2V-4Sw, .hasBanner-2SrLR3 .header-2V-4Sw:hover {
+  box-shadow: var(--elevation-low);
 }
-*/
+.bannerVisible-2ZE_qG .header-2V-4Sw {
+  filter: none;
+}
