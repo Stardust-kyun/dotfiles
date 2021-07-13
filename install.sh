@@ -23,7 +23,7 @@ echo -e "\nInstalling base packages\n"
 sudo pacman -S --noconfirm --needed base-devel git rsync
 
 echo -e "\n1) xf86-video-intel	2) xf86-video-amdgpu	3) none"
-read -r -p "Select your graphics drivers (default 3): " video
+read -r -p "Select your graphics drivers: " video
 
 case $video in
 	[1])
@@ -38,10 +38,6 @@ case $video in
 		driver=""
 		;;
 
-	[*])
-		driver=""
-		;;
-
 esac
 
 sudo pacman -S --noconfirm --needed $driver
@@ -50,7 +46,7 @@ echo -e "\nInstalling required packages from official repos\n" && sleep 3
 sudo pacman -S --noconfirm --needed alacritty rxvt-unicode bspwm sxhkd i3-gaps obconf dunst picom xsettingsd lightdm-webkit2-greeter firefox nitrogen nautilus mousepad vim maim polkit-gnome network-manager-applet blueberry lxappearance xorg light pulseaudio pulseaudio-alsa pulseaudio-bluetooth alsa-utils alsa-plugins alsa-firmware ttf-fira-code ttf-roboto noto-fonts noto-fonts-cjk noto-fonts-emoji npm nodejs rustup xdg-user-dirs
 
 echo "1) yay	2) paru"
-read -r -p "What AUR helper would you like? (default 1) " helper
+read -r -p "What AUR helper would you like? " helper
 
 if [[ $helper = "1" ]]; then
 	git clone https://aur.archlinux.org/yay.git ~/yay
