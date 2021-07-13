@@ -38,7 +38,7 @@ I have found my dotfiles to work out of the box on EndeavourOS. If you're using 
 
 From official repos:
 ```
-sudo pacman -S alacritty rxvt-unicode bspwm sxhkd i3-gaps obconf dunst picom xsettingsd lightdm-webkit2-greeter firefox nitrogen nautilus mousepad vim maim polkit-gnome network-manager-applet blueberry lxappearance xorg light pulseaudio pulseaudio-alsa pulseaudio-bluetooth alsa-utils alsa-plugins alsa-firmware ttf-fira-code ttf-roboto noto-fonts noto-fonts-cjk noto-fonts-emoji npm nodejs rustup xdg-user-dirs
+sudo pacman -S alacritty rxvt-unicode bspwm sxhkd i3-gaps obconf dunst picom xsettingsd lightdm-webkit2-greeter firefox nitrogen nautilus mousepad vim maim polkit-gnome network-manager-applet blueberry lxappearance xorg light pulseaudio pulseaudio-alsa pulseaudio-bluetooth alsa-utils alsa-plugins alsa-firmware ttf-fira-code ttf-roboto ttf-iosevka noto-fonts noto-fonts-cjk noto-fonts-emoji npm nodejs rustup xdg-user-dirs
 ```
 
 
@@ -46,7 +46,7 @@ If you don't already have it installed, I suggest using [yay](https://aur.archli
 
 From the AUR:
 ```
-yay -S polybar betterlockscreen discord-canary zentile nerd-fonts-fira-code nerd-fonts-iosevka gtk3-nocsd-git
+yay -S polybar betterlockscreen discord-canary zentile nerd-fonts-fira-code gtk3-nocsd-git
 ```
 
 From source:
