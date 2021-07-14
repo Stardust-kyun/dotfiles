@@ -25,20 +25,18 @@ sudo pacman -S --noconfirm --needed base-devel git rsync
 echo -e "\n1) xf86-video-intel	2) xf86-video-amdgpu	3) none"
 read -r -p "Select your graphics drivers: " video
 
-case $video in
-	[1])
-		driver="xf86-video-intel"
-		;;
+if [[ $video = "1" ]]; then
+	driver="xf86-video-intel"
 
-	[2])
-		driver="xf86-video-amdgpu"
-		;;
+elif [[ $video = "2" ]]; then
+	driver="xf86-video-amdgpu"
 
-	[3])
-		driver=""
-		;;
+elif [[ $video = "3" ]]; then
+	driver=""
 
-esac
+else
+	driver=""
+fi
 
 sudo pacman -S --noconfirm --needed $driver
 
@@ -56,9 +54,8 @@ if [[ $helper = "1" ]]; then
 	cd ~/
 
 	aur="yay"
-fi
 
-if [[ $helper = "2" ]]; then
+elif [[ $helper = "2" ]]; then
 	rustup install nightly
 	rustup default nightly
 	git clone https://aur.archlinux.org/paru.git ~/paru
@@ -68,6 +65,16 @@ if [[ $helper = "2" ]]; then
 	cd ~/
 
 	aur="paru"
+
+else
+	git clone https://aur.archlinux.org/yay.git ~/yay
+	cd ~/yay
+	makepkg -si
+	rm -rf ~/yay
+	cd ~/
+
+	aur="yay"
+
 fi
 
 echo -e "\nInstalling required packages from AUR\n" && sleep 3
